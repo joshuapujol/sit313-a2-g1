@@ -11,7 +11,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="Image1" BackgroundColor="Red" />
+            <Image x:Name="MainImage" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" />
             <Label Grid.Row="0" Grid.Column="1" Text="Image2" BackgroundColor="DarkSeaGreen" />
             <Label Grid.Row="1" Grid.Column="0" Text="Image3" BackgroundColor="PaleVioletRed" />
             <Label Grid.Row="1" Grid.Column="1" Text="Image4" BackgroundColor="SeaShell" />
@@ -19,8 +19,12 @@
             <Label Grid.Row="2" Grid.Column="1" Text="Image6" BackgroundColor="HotPink" />
         </Grid>
     </ContentPage>
-    <ContentPage Title="Camera" Icon="camera.png" />
-    <ContentPage Title="Upload" Icon="upload.png">
+    <ContentPage Title="Camera" Icon="camera.png">
+        <StackLayout>
+            <Button Text="Take Photo" Clicked="TakePhotoButton_OnClicked" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage>
+        <ContentPage Title="Upload" Icon="upload.png">
         <StackLayout>
             <Image Source="camera2.png" VerticalOptions="Center" HorizontalOptions="Center" />
             <Label FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Text="Upload your photos to the cloud!" />
