@@ -11,7 +11,8 @@ namespace SIT313A2
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+            // Initial screen points to OAuthLoginPage (for authentication)
+			MainPage = new OAuthLoginPage();
 		}
 
 		protected override void OnStart ()

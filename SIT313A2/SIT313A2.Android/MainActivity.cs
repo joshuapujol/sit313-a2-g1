@@ -24,6 +24,8 @@ namespace SIT313A2.Droid
             await CrossMedia.Current.Initialize();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            // Authentication screen MainActivity connection
+            global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, bundle);
             LoadApplication(new App());
         }
 
