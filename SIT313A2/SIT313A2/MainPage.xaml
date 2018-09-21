@@ -11,12 +11,12 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Image x:Name="MainImage" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" />
-            <Label Grid.Row="0" Grid.Column="1" Text="Image2" BackgroundColor="DarkSeaGreen" />
-            <Label Grid.Row="1" Grid.Column="0" Text="Image3" BackgroundColor="PaleVioletRed" />
-            <Label Grid.Row="1" Grid.Column="1" Text="Image4" BackgroundColor="SeaShell" />
-            <Label Grid.Row="2" Grid.Column="0" Text="Image5" BackgroundColor="Orchid" />
-            <Label Grid.Row="2" Grid.Column="1" Text="Image6" BackgroundColor="HotPink" />
+            <Image x:Name="Image1" Grid.Row="0" Grid.Column="0" BackgroundColor="Red" />
+            <Image x:Name="Image2" Grid.Row="0" Grid.Column="1" BackgroundColor="DarkSeaGreen" />
+            <Image x:Name="Image3" Grid.Row="1" Grid.Column="0" BackgroundColor="PaleVioletRed" />
+            <Image x:Name="Image4" Grid.Row="1" Grid.Column="1" BackgroundColor="SeaShell" />
+            <Image x:Name="Image5" Grid.Row="2" Grid.Column="0" BackgroundColor="Orchid" />
+            <Image x:Name="Image6" Grid.Row="2" Grid.Column="1" BackgroundColor="HotPink" />
         </Grid>
     </ContentPage>
     <ContentPage Title="Camera" Icon="camera.png">

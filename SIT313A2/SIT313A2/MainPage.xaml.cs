@@ -14,7 +14,9 @@ namespace SIT313A2
 {
 	public partial class MainPage : TabbedPage
 	{
-		public MainPage()
+
+        int imagePositon = 1;
+        public MainPage()
 		{
 			InitializeComponent();
 		}
@@ -39,21 +41,133 @@ namespace SIT313A2
 
             if (cameraStatus == PermissionStatus.Granted && storageStatus == PermissionStatus.Granted)
             {
-                var file = await CrossMedia.Current.TakePhotoAsync(
-                    new StoreCameraMediaOptions
-                    {
-                        SaveToAlbum = true,
-                        Name = "Test.jpg"
-                    });
-                if (file == null)
-                    return;
 
-                MainImage.Source = ImageSource.FromStream(() =>
-                {
-                    var stream = file.GetStream();
-                    file.Dispose();
-                    return stream;
-                });
+                
+
+                switch (imagePositon) {
+
+                    case 1:
+
+                        imagePositon++;
+                        var file = await CrossMedia.Current.TakePhotoAsync(
+                            new StoreCameraMediaOptions
+                            {
+                                SaveToAlbum = true,
+                                Name = "Test.jpg"
+                            });
+                        if (file == null)
+                            return;
+
+                        Image1.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            file.Dispose();
+                            return stream;
+                        });
+                        Console.WriteLine(imagePositon);
+                        break;
+
+                    case 2:
+
+                         file = await CrossMedia.Current.TakePhotoAsync(
+                            new StoreCameraMediaOptions
+                            {
+                                SaveToAlbum = true,
+                                Name = "Test.jpg"
+                            });
+                        if (file == null)
+                            return;
+
+                        Image2.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            file.Dispose();
+                            return stream;
+                        });
+                        imagePositon++;
+                        break;
+
+                    case 3:
+
+                        file = await CrossMedia.Current.TakePhotoAsync(
+                           new StoreCameraMediaOptions
+                           {
+                               SaveToAlbum = true,
+                               Name = "Test.jpg"
+                           });
+                        if (file == null)
+                            return;
+
+                        Image3.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            file.Dispose();
+                            return stream;
+                        });
+                        imagePositon++;
+                        break;
+
+                    case 4:
+
+                        file = await CrossMedia.Current.TakePhotoAsync(
+                           new StoreCameraMediaOptions
+                           {
+                               SaveToAlbum = true,
+                               Name = "Test.jpg"
+                           });
+                        if (file == null)
+                            return;
+
+                        Image4.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            file.Dispose();
+                            return stream;
+                        });
+                        imagePositon++;
+                        break;
+
+                    case 5:
+
+                        file = await CrossMedia.Current.TakePhotoAsync(
+                           new StoreCameraMediaOptions
+                           {
+                               SaveToAlbum = true,
+                               Name = "Test.jpg"
+                           });
+                        if (file == null)
+                            return;
+
+                        Image5.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            file.Dispose();
+                            return stream;
+                        });
+                        imagePositon++;
+                        break;
+
+                    case 6:
+
+                        file = await CrossMedia.Current.TakePhotoAsync(
+                           new StoreCameraMediaOptions
+                           {
+                               SaveToAlbum = true,
+                               Name = "Test.jpg"
+                           });
+                        if (file == null)
+                            return;
+
+                        Image6.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            file.Dispose();
+                            return stream;
+                        });
+                        imagePositon++;
+                        break;
+
+                }
 
             }
             else
