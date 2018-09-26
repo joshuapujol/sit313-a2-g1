@@ -28,7 +28,7 @@
         <StackLayout>
             <Image Source="camera2.png" VerticalOptions="Center" HorizontalOptions="Center" />
             <Label FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" Text="Upload your photos to the cloud!" />
-            <Button Text="Upload Image" Clicked="OnButtonClicked" VerticalOptions="CenterAndExpand" />
+            <Button Text="Upload Image" Clicked="UploadPhotoButton_OnClicked" VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage>
 </TabbedPage>

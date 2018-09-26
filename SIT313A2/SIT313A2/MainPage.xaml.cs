@@ -23,8 +23,70 @@ namespace SIT313A2
 
 
 
-        public void OnButtonClicked(object sender, EventArgs args)
+        public async void UploadPhotoButton_OnClicked(object sender, EventArgs e)
         {
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await DisplayAlert("No upload", "Picking a photo is not supported.", "OK");
+                return;
+            }
+
+            switch (imagePositon) {
+
+                case 1:
+                    imagePositon++;
+                    var file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                        return;
+
+                    Image1.Source = ImageSource.FromStream(() => file.GetStream());
+                    break;
+
+                case 2:
+                    imagePositon++;
+                    file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                        return;
+
+                    Image2.Source = ImageSource.FromStream(() => file.GetStream());
+                    break;
+
+                case 3:
+                    imagePositon++;
+                    file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                        return;
+
+                    Image3.Source = ImageSource.FromStream(() => file.GetStream());
+                    break;
+
+                case 4:
+                    imagePositon++;
+                    file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                        return;
+
+                    Image4.Source = ImageSource.FromStream(() => file.GetStream());
+                    break;
+
+
+                case 5:
+                    imagePositon++;
+                    file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                        return;
+
+                    Image5.Source = ImageSource.FromStream(() => file.GetStream());
+                    break;
+
+                case 6:
+                    file = await CrossMedia.Current.PickPhotoAsync();
+                    if (file == null)
+                        return;
+
+                    Image6.Source = ImageSource.FromStream(() => file.GetStream());
+                    break;
+            }
         }
         public async void TakePhotoButton_OnClicked(object sender, EventArgs e)
         {
@@ -164,7 +226,6 @@ namespace SIT313A2
                             file.Dispose();
                             return stream;
                         });
-                        imagePositon++;
                         break;
 
                 }
